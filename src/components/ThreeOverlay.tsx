@@ -22,7 +22,7 @@ function generateSpherePoints(count: number, radius: number) {
 }
 
 function ParticleField() {
-  const ref = useRef<any>();
+  const ref = useRef<any>(null);
   
   // Memoize to avoid regenerating on every render
   const sphere = useMemo(() => generateSpherePoints(5000, 1.5), []);

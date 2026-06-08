@@ -10,6 +10,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       orientation: "vertical",
       gestureOrientation: "vertical" 
     }}>
+      {/* @ts-ignore - React 19 type mismatch with Lenis */}
       {children}
     </ReactLenis>
   );
