@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function Doctors() {
   const doctors = [
@@ -32,7 +33,7 @@ export function Doctors() {
               className="relative group cursor-pointer"
             >
               <div className="w-full aspect-[3/4] rounded-[2rem] overflow-hidden relative shadow-md transition-all duration-700 group-hover:shadow-2xl bg-zinc-100">
-                <img src={doc.image} alt={doc.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <Image src={doc.image} alt={doc.name} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity"></div>
               </div>
               <div className="absolute bottom-0 left-0 w-full p-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">

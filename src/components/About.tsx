@@ -2,6 +2,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Activity, Shield, Clock } from "lucide-react";
+import Image from "next/image";
 
 export function About() {
   const ref = useRef<HTMLElement>(null);
@@ -65,10 +66,11 @@ export function About() {
 
           <motion.div style={{ y }} className="relative h-[650px] rounded-[2rem] overflow-hidden border border-zinc-200 bg-zinc-50 shadow-2xl shadow-zinc-200/50">
             {/* The generated premium clinic image */}
-            <img 
+            <Image 
               src="/clinic-interior.png" 
               alt="Premium Clinic Interior" 
-              className="absolute inset-0 w-full h-full object-cover" 
+              fill
+              className="object-cover" 
             />
             {/* Elegant dark gradient to ensure the text on the badge pops */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

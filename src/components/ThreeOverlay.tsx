@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import { useMemo } from "react";
+import * as THREE from "three";
 
 function generateSpherePoints(count: number, radius: number) {
   const points = new Float32Array(count * 3);
@@ -22,7 +23,7 @@ function generateSpherePoints(count: number, radius: number) {
 }
 
 function ParticleField() {
-  const ref = useRef<any>(null);
+  const ref = useRef<THREE.Points>(null);
   
   // Memoize to avoid regenerating on every render
   const sphere = useMemo(() => generateSpherePoints(5000, 1.5), []);
