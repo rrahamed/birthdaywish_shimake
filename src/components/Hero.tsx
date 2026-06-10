@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-black"
+      className="relative h-screen min-h-[600px] w-full overflow-hidden bg-black"
     >
       {/* Video Background */}
       <motion.div style={{ y, opacity }} className="absolute inset-0 w-full h-full">
@@ -38,13 +38,13 @@ export function Hero() {
       <ThreeOverlay />
 
       {/* Hero Content */}
-      <div className="relative z-20 h-full flex items-center justify-center container mx-auto px-6 md:px-12 pt-20">
+      <div className="relative z-20 h-full flex items-center justify-center container mx-auto px-6 md:px-12 pt-24 pb-16">
         <div className="max-w-4xl text-center flex flex-col items-center">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-serif text-white tracking-tight mb-8 leading-[1.1]"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif text-white tracking-tight mb-6 md:mb-8 leading-[1.1]"
           >
             The Pinnacle of <br/><span className="italic text-blue-300">Personal Care</span>
           </motion.h1>
@@ -53,7 +53,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="text-lg md:text-xl text-gray-300 max-w-2xl mb-12 font-light leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mb-10 md:mb-12 font-light leading-relaxed px-2"
           >
             A high-performance Next.js 15 healthcare website template crafted by PointOfDev. Featuring premium GSAP animations, 3D WebGL components, and flawless Apple-style smooth scrolling.
           </motion.p>
@@ -62,13 +62,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0"
           >
-            <a href="#appointment" className="px-10 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-all flex items-center justify-center gap-2 group shadow-xl">
+            <a href="#appointment" className="w-full sm:w-auto px-6 sm:px-10 py-3.5 sm:py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-all flex items-center justify-center gap-2 group shadow-xl text-sm sm:text-base whitespace-nowrap">
               Request Consultation
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
             </a>
-            <a href="#services" className="px-10 py-4 rounded-full border border-white/30 bg-black/50 text-white font-semibold hover:bg-white/10 transition-all backdrop-blur-md text-center">
+            <a href="#services" className="w-full sm:w-auto px-6 sm:px-10 py-3.5 sm:py-4 rounded-full border border-white/30 bg-black/50 text-white font-semibold hover:bg-white/10 transition-all backdrop-blur-md text-center text-sm sm:text-base whitespace-nowrap">
               Explore Services
             </a>
           </motion.div>
@@ -80,9 +80,9 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 z-20"
+        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-4 z-20"
       >
-        <div className="w-[1px] h-16 bg-white/20 overflow-hidden">
+        <div className="w-[1px] h-12 sm:h-16 bg-white/20 overflow-hidden">
           <motion.div
             className="w-full h-1/2 bg-white"
             animate={{ y: ["-100%", "200%"] }}
