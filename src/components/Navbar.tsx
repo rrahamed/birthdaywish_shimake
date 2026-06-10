@@ -70,14 +70,15 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#appointment"
-            onClick={(e) => handleNavClick(e, "#appointment")}
+            href="/booking"
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn("px-6 py-2 rounded-full border text-xs font-semibold uppercase tracking-wider transition-all duration-300", 
               scrolled 
                 ? "border-zinc-900 text-zinc-900 hover:bg-zinc-900 hover:text-white" 
                 : "border-white text-white hover:bg-white hover:text-black")}
           >
-            Consultation
+            Book Appointment
           </a>
         </nav>
 
@@ -110,11 +111,12 @@ export function Navbar() {
               </a>
             ))}
             <a
-              href="#appointment"
-              onClick={(e) => handleNavClick(e, "#appointment")}
+              href="/booking"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-4 rounded-xl bg-zinc-900 text-white font-medium hover:bg-zinc-800 transition-all duration-300 text-center mt-4"
             >
-              Request Consultation
+              Book Appointment
             </a>
           </div>
         </motion.div>

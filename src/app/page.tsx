@@ -6,6 +6,7 @@ import { Services } from "@/components/Services";
 import { Doctors } from "@/components/Doctors";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Chatbot } from "@/components/Chatbot";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Doctors />
         <Contact />
         <Footer />
+        <Chatbot />
       </main>
     </SmoothScroll>
   );

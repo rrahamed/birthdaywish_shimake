@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans bg-zinc-50 text-zinc-900 antialiased selection:bg-blue-200">
+      <body suppressHydrationWarning className="font-sans bg-zinc-50 text-zinc-900 antialiased selection:bg-blue-200">
         {children}
       </body>
     </html>
